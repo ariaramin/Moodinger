@@ -19,6 +19,7 @@ class LoginScreen extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        resizeToAvoidBottomInset: false,
         body: Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: [
@@ -150,6 +151,8 @@ class LoginScreen extends StatelessWidget {
           ),
           TextField(
             style: Theme.of(context).textTheme.bodyMedium,
+            obscureText: true,
+            // obscuringCharacter: "*",
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),

@@ -17,7 +17,8 @@ dependencies:
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.2
   hexcolor: ^3.0.1
-
+  dotted_border: ^2.0.0+3
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
-import 'package:moodinger/screens/login_screen.dart';
-import 'package:moodinger/screens/switch_account_screen.dart';
-
-import 'screens/splash_screen.dart';
+import 'package:moodinger/screens/home_screen.dart';
 
 void main() {
   runApp(Application());
@@ -18,6 +15,11 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: TextTheme(
+          bodySmall: TextStyle(
+            fontFamily: 'GB',
+            fontSize: 12,
+            color: whiteColor,
+          ),
           bodyMedium: TextStyle(
             fontFamily: 'GB',
             fontSize: 16,
@@ -41,8 +43,11 @@ class Application extends StatelessWidget {
             ),
           ),
         ),
+        iconTheme: IconThemeData(
+          color: whiteColor,
+        ),
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
