@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/login_screen.dart';
+import 'package:moodinger/screens/switch_account_screen.dart';
 
 import 'screens/splash_screen.dart';
 
@@ -14,9 +17,32 @@ class Application extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: "Gilroy",
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(
+            fontFamily: 'GB',
+            fontSize: 16,
+            color: whiteColor,
+          ),
+          bodyLarge: TextStyle(
+            fontFamily: 'GB',
+            fontSize: 20,
+            color: whiteColor,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: primaryColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            textStyle: TextStyle(
+              fontFamily: 'GB',
+              fontSize: 16,
+            ),
+          ),
+        ),
       ),
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

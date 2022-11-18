@@ -17,7 +17,6 @@ dependencies:
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.2
   hexcolor: ^3.0.1
-  # flutter_svg: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -29,24 +28,37 @@ flutter:
 
   assets:
     - images/
-  #   - images/a_dot_ham.jpeg
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
   fonts:
-    - family: Gilroy
+    - family: GR
       fonts:
-        - asset: fonts/GilroyLight.otf
-        - asset: fonts/GilroyBold.otf
+        - asset: fonts/GilroyRegular.ttf
+          weight: 400
+
+    - family: GM
+      fonts:
+        - asset: fonts/GilroyMedium.ttf
+          weight: 500
+
+    - family: GB
+      fonts:
+        - asset: fonts/GilroyBold.ttf
+          weight: 700
+
+    - family: GEB
+      fonts:
+        - asset: fonts/GilroyExtraBold.ttf
+          weight: 800
+          
+    - family: GH
+      fonts:
+        - asset: fonts/GilroyHeavy.ttf
+          weight: 900
+
+    - family: SM
+      fonts:
+        - asset: fonts/ShabnamMedium.ttf
+          weight: 500
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
