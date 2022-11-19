@@ -3,5 +3,6 @@ import 'package:hexcolor/hexcolor.dart';
 
 final Color primaryColor = HexColor("#F35383");
 final Color blackColor = HexColor("#1C1F2E");
+final Color blackLightColor = HexColor("#272B40");
 final Color greyColor = HexColor("#C5C5C5");
 final Color whiteColor = HexColor("#FFFFFF");

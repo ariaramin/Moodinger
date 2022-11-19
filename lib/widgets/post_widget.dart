@@ -112,7 +112,13 @@ class PostWidget extends StatelessWidget {
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
-                    builder: (context) => ShareBottomSheet(),
+                    backgroundColor: Colors.transparent,
+                    builder: (context) => Padding(
+                      padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).viewInsets.bottom,
+                      ),
+                      child: ShareBottomSheet(),
+                    ),
                   );
                 },
                 child: Icon(

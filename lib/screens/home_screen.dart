@@ -13,10 +13,22 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: blackColor,
       appBar: _getAppBar(),
       body: SafeArea(
-        child: Column(
-          children: [
-            _getStoryList(),
-            PostWidget(),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 14),
+                child: _getStoryList(),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return PostWidget();
+                },
+                childCount: 18,
+              ),
+            )
           ],
         ),
       ),

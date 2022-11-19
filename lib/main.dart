@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/explore_screen.dart';
 import 'package:moodinger/screens/home_screen.dart';
 
 void main() {
@@ -47,7 +48,7 @@ class Application extends StatelessWidget {
           color: whiteColor,
         ),
       ),
-      home: HomeScreen(),
+      home: ExploreScreen(),
     );
   }
 }
