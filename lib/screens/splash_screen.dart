@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/switch_account_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      Duration(milliseconds: 1800),
+      () {
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SwitchAccountScreen(),
+            ),
+            (route) => false);
+      },
+    );
     return Container(
       decoration: BoxDecoration(
         color: blackColor,
@@ -35,6 +47,8 @@ class SplashScreen extends StatelessWidget {
                     Text(
                       'From',
                       style: TextStyle(
+                        fontFamily: "GB",
+                        fontSize: 14,
                         color: greyColor,
                         fontWeight: FontWeight.bold,
                       ),
@@ -42,6 +56,8 @@ class SplashScreen extends StatelessWidget {
                     Text(
                       'ExpertFlutter',
                       style: TextStyle(
+                        fontFamily: "GB",
+                        fontSize: 16,
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
                       ),

@@ -28,8 +28,8 @@ class PostWidget extends StatelessWidget {
 
   Widget _getPostContent(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width / 1.15,
-      height: MediaQuery.of(context).size.width / 1.05,
+      width: MediaQuery.of(context).size.width / 1.12,
+      height: MediaQuery.of(context).size.width,
       child: Stack(
         alignment: AlignmentDirectional.bottomCenter,
         children: [
@@ -38,10 +38,10 @@ class PostWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(18),
               child: Container(
-                width: MediaQuery.of(context).size.width / 1.15,
-                height: MediaQuery.of(context).size.width / 1.2,
+                width: MediaQuery.of(context).size.width / 1.12,
+                height: MediaQuery.of(context).size.width / 1.12,
                 child: Image.asset(
-                  'images/instagram_post.png',
+                  'images/item2.png',
                   fit: BoxFit.fill,
                 ),
               ),

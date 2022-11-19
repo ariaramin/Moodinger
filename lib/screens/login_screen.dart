@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -184,7 +185,14 @@ class LoginScreen extends StatelessWidget {
             height: 46,
             width: 132,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                    (route) => false);
+              },
               child: Text('Sign in'),
             ),
           ),

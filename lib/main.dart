@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
-import 'package:moodinger/screens/explore_screen.dart';
-import 'package:moodinger/screens/home_screen.dart';
+import 'package:moodinger/screens/splash_screen.dart';
 
 void main() {
   runApp(Application());
@@ -48,7 +47,7 @@ class Application extends StatelessWidget {
           color: whiteColor,
         ),
       ),
-      home: ExploreScreen(),
+      home: SplashScreen(),
     );
   }
 }

@@ -34,7 +34,7 @@ class ExploreScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  childCount: 10,
+                  childCount: 12,
                 ),
                 gridDelegate: SliverQuiltedGridDelegate(
                   crossAxisCount: 3,
@@ -44,6 +44,7 @@ class ExploreScreen extends StatelessWidget {
                   pattern: [
                     QuiltedGridTile(1, 1),
                     QuiltedGridTile(2, 2),
+                    QuiltedGridTile(1, 1),
                     QuiltedGridTile(1, 1),
                     QuiltedGridTile(1, 1),
                     QuiltedGridTile(1, 1),

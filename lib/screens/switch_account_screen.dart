@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/home_screen.dart';
+import 'package:moodinger/screens/login_screen.dart';
 
 class SwitchAccountScreen extends StatelessWidget {
   const SwitchAccountScreen({super.key});
@@ -30,8 +32,8 @@ class SwitchAccountScreen extends StatelessWidget {
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
                       child: Container(
-                        height: MediaQuery.of(context).size.width / 1.25,
-                        width: MediaQuery.of(context).size.width / 1.25,
+                        height: MediaQuery.of(context).size.width / 1.28,
+                        width: MediaQuery.of(context).size.width / 1.28,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
@@ -41,44 +43,59 @@ class SwitchAccountScreen extends StatelessWidget {
                               Color.fromRGBO(255, 255, 255, 0.2),
                             ],
                           ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(42),
-                          ),
+                          borderRadius: BorderRadius.circular(42),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(36),
+                              borderRadius: BorderRadius.circular(28),
                               child: Image(
                                 image: AssetImage('images/profile.png'),
-                                width: 114,
+                                width: 108,
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 12,
                             ),
                             Text(
                               'Ariaramin',
                               style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 24,
                             ),
                             SizedBox(
                               height: 46,
                               width: 132,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                      (route) => false);
+                                },
                                 child: Text('Confirm'),
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 18,
                             ),
-                            Text(
-                              'switch account',
-                              style: Theme.of(context).textTheme.bodyMedium,
+                            InkWell(
+                              onTap: () {
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginScreen(),
+                                    ),
+                                    (route) => false);
+                              },
+                              child: Text(
+                                'switch account',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
                             ),
                           ],
                         ),
@@ -90,7 +107,7 @@ class SwitchAccountScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(bottom: 42, top: 142),
+            padding: EdgeInsets.only(bottom: 42, top: 52),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
