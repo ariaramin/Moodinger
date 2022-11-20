@@ -38,14 +38,16 @@ class HomeScreen extends StatelessWidget {
   Widget _getStoryList() {
     return Container(
       height: 98,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return index == 0
-              ? _addStoryContainer(context)
-              : _getStoryContainer(context);
-        },
+      child: Center(
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return index == 0
+                ? _addStoryContainer(context)
+                : _getStoryContainer(context);
+          },
+        ),
       ),
     );
   }
@@ -54,6 +56,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DottedBorder(
             borderType: BorderType.RRect,
@@ -63,9 +66,7 @@ class HomeScreen extends StatelessWidget {
             dashPattern: [12, 6],
             strokeWidth: 2,
             child: ClipRRect(
-              borderRadius: BorderRadius.all(
-                Radius.circular(16),
-              ),
+              borderRadius: BorderRadius.circular(14),
               child: Container(
                 height: 58,
                 width: 58,
@@ -91,6 +92,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 64,
@@ -106,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                 height: 60,
                 decoration: BoxDecoration(
                   color: blackColor,
-                  borderRadius: BorderRadius.circular(18),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 child: Icon(
                   Iconsax.add,

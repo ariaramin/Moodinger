@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
+import 'package:moodinger/screens/add_post_screen.dart';
 import 'package:moodinger/screens/splash_screen.dart';
 
 void main() {

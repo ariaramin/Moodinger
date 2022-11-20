@@ -28,9 +28,9 @@ class ExploreScreen extends StatelessWidget {
                   (context, index) {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(12),
-                      child: FittedBox(
+                      child: Image.asset(
+                        'images/item$index.png',
                         fit: BoxFit.cover,
-                        child: Image.asset('images/item$index.png'),
                       ),
                     );
                   },

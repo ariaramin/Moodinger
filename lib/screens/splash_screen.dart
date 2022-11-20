@@ -33,7 +33,7 @@ class SplashScreen extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 104),
+                padding: EdgeInsets.symmetric(horizontal: 134),
                 child: Center(
                   child: Image(
                     image: AssetImage('images/logo.png'),
@@ -48,18 +48,16 @@ class SplashScreen extends StatelessWidget {
                       'From',
                       style: TextStyle(
                         fontFamily: "GB",
-                        fontSize: 14,
+                        fontSize: 12,
                         color: greyColor,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'ExpertFlutter',
                       style: TextStyle(
                         fontFamily: "GB",
-                        fontSize: 16,
+                        fontSize: 14,
                         color: Colors.blue,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],

@@ -99,14 +99,14 @@ class LoginScreen extends StatelessWidget {
                 'Don\'t have an account? / ',
                 style: TextStyle(
                   color: greyColor,
-                  fontSize: 16,
+                  fontSize: 14,
                 ),
               ),
               Text(
                 'Sign up',
                 style: TextStyle(
                   color: whiteColor,
-                  fontSize: 16,
+                  fontSize: 14,
                 ),
               )
             ],
