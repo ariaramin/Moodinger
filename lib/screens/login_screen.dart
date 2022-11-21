@@ -20,7 +20,6 @@ class LoginScreen extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        resizeToAvoidBottomInset: false,
         body: Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: [
