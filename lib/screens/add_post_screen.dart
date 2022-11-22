@@ -75,7 +75,7 @@ class AddPostScreen extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
-                'images/item0.png',
+                'images/posts/self_post0.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -100,7 +100,7 @@ class AddPostScreen extends StatelessWidget {
                             width: double.infinity,
                             height: double.infinity,
                             child: Image.asset(
-                              'images/item$index.png',
+                              'images/posts/self_post$index.png',
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -109,7 +109,7 @@ class AddPostScreen extends StatelessWidget {
                     : ClipRRect(
                         borderRadius: BorderRadius.circular(12),
                         child: Image.asset(
-                          'images/item$index.png',
+                          'images/posts/self_post$index.png',
                           fit: BoxFit.cover,
                         ),
                       );

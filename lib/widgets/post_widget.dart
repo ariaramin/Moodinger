@@ -8,7 +8,8 @@ import 'package:moodinger/widgets/share_bottom_sheet.dart';
 import '../constants/constants.dart';
 
 class PostWidget extends StatelessWidget {
-  const PostWidget({super.key});
+  int _index;
+  PostWidget(this._index, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class PostWidget extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 1.12,
                 height: MediaQuery.of(context).size.width / 1.12,
                 child: Image.asset(
-                  'images/item2.png',
+                  'images/posts/post${_index + 1}.png',
                   fit: BoxFit.fill,
                 ),
               ),
@@ -161,7 +162,7 @@ class PostWidget extends StatelessWidget {
                     height: 42,
                     width: 42,
                     child: Image(
-                      image: AssetImage("images/profile.png"),
+                      image: AssetImage("images/users/user$_index.png"),
                     ),
                   ),
                 ),
@@ -173,7 +174,7 @@ class PostWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Ariaramin',
+                      _index == 0 ? "Amirahmad" : "user$_index",
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     SizedBox(

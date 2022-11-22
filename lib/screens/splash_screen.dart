@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
-import 'package:moodinger/screens/switch_account_screen.dart';
+import 'package:moodinger/screens/login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
-              builder: (context) => SwitchAccountScreen(),
+              builder: (context) => LoginScreen(),
             ),
             (route) => false);
       },

@@ -30,6 +30,9 @@ flutter:
 
   assets:
     - images/
+    - images/users/
+    - images/posts/
+
 
   fonts:
     - family: GR

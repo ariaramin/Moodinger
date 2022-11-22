@@ -29,7 +29,7 @@ class ExploreScreen extends StatelessWidget {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        'images/item$index.png',
+                        'images/posts/post$index.png',
                         fit: BoxFit.cover,
                       ),
                     );

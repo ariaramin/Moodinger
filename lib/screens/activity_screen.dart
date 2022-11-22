@@ -68,7 +68,7 @@ class _ActivityScreenState extends State<ActivityScreen>
         ),
         SliverList(
           delegate: SliverChildBuilderDelegate((context, index) {
-            return _getListItem(ActivityStatus.likes);
+            return _getListItem(ActivityStatus.likes, index);
           }, childCount: 2),
         ),
         SliverToBoxAdapter(
@@ -82,12 +82,12 @@ class _ActivityScreenState extends State<ActivityScreen>
         ),
         SliverList(
           delegate: SliverChildBuilderDelegate((context, index) {
-            return _getListItem(ActivityStatus.followBack);
+            return _getListItem(ActivityStatus.followBack, index);
           }, childCount: 5),
         ),
         SliverList(
           delegate: SliverChildBuilderDelegate((context, index) {
-            return _getListItem(ActivityStatus.following);
+            return _getListItem(ActivityStatus.following, index);
           }, childCount: 2),
         ),
         SliverToBoxAdapter(
@@ -101,14 +101,14 @@ class _ActivityScreenState extends State<ActivityScreen>
         ),
         SliverList(
           delegate: SliverChildBuilderDelegate((context, index) {
-            return _getListItem(ActivityStatus.following);
+            return _getListItem(ActivityStatus.following, index);
           }, childCount: 5),
         )
       ],
     );
   }
 
-  Widget _getListItem(ActivityStatus status) {
+  Widget _getListItem(ActivityStatus status, int index) {
     return Padding(
       padding: EdgeInsets.all(12),
       child: Row(
@@ -132,7 +132,7 @@ class _ActivityScreenState extends State<ActivityScreen>
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image(
-                image: AssetImage("images/profile.png"),
+                image: AssetImage("images/users/user$index.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -147,7 +147,7 @@ class _ActivityScreenState extends State<ActivityScreen>
               Row(
                 children: [
                   Text(
-                    'arsenixdev',
+                    index == 0 ? "Amirahmad" : "user$index",
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   SizedBox(
@@ -191,13 +191,13 @@ class _ActivityScreenState extends State<ActivityScreen>
             ],
           ),
           Spacer(),
-          _getActionActivityRow(status),
+          _getActionActivityRow(status, index),
         ],
       ),
     );
   }
 
-  Widget _getActionActivityRow(ActivityStatus status) {
+  Widget _getActionActivityRow(ActivityStatus status, int index) {
     switch (status) {
       case ActivityStatus.followBack:
         return ElevatedButton(
@@ -219,7 +219,7 @@ class _ActivityScreenState extends State<ActivityScreen>
             borderRadius: BorderRadius.circular(8),
             child: FittedBox(
               fit: BoxFit.cover,
-              child: Image.asset('images/item1.png'),
+              child: Image.asset('images/posts/post$index.png'),
             ),
           ),
         );

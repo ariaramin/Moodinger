@@ -78,7 +78,8 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
                                     height: 50,
                                     width: 50,
                                     child: Image(
-                                      image: AssetImage("images/profile.png"),
+                                      image: AssetImage(
+                                          "images/users/user$index.png"),
                                     ),
                                   ),
                                 ),
@@ -91,7 +92,8 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
                                   height: 58,
                                   width: 58,
                                   child: Image(
-                                    image: AssetImage("images/profile.png"),
+                                    image: AssetImage(
+                                        "images/users/user$index.png"),
                                   ),
                                 ),
                               ),
@@ -99,7 +101,7 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
                           height: 8,
                         ),
                         Text(
-                          'Ariaramin',
+                          index == 0 ? "Amirahmad" : "user$index",
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ],

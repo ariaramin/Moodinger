@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  return PostWidget();
+                  return PostWidget(index);
                 },
                 childCount: 18,
               ),
@@ -45,14 +45,14 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return index == 0
                 ? _addStoryContainer(context)
-                : _getStoryContainer(context);
+                : _getStoryContainer(context, index);
           },
         ),
       ),
     );
   }
 
-  Widget _getStoryContainer(BuildContext context) {
+  Widget _getStoryContainer(BuildContext context, int index) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 height: 58,
                 width: 58,
                 child: Image(
-                  image: AssetImage("images/profile.png"),
+                  image: AssetImage("images/users/user$index.png"),
                 ),
               ),
             ),
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
             height: 12,
           ),
           Text(
-            'Ariaramin',
+            index == 0 ? "Amirahmad" : "user$index",
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
