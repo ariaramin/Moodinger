@@ -1,9 +1,8 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
-import 'package:moodinger/screens/home_screen.dart';
 import 'package:moodinger/screens/login_screen.dart';
+import 'package:moodinger/screens/main_screen.dart';
 
 class SwitchAccountScreen extends StatelessWidget {
   const SwitchAccountScreen({super.key});
@@ -73,7 +72,7 @@ class SwitchAccountScreen extends StatelessWidget {
                                   Navigator.pushAndRemoveUntil(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => MainScreen(),
                                       ),
                                       (route) => false);
                                 },

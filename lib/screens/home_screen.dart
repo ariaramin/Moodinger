@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                 (context, index) {
                   return PostWidget(index);
                 },
-                childCount: 18,
+                childCount: 13,
               ),
             )
           ],
@@ -41,11 +41,11 @@ class HomeScreen extends StatelessWidget {
       child: Center(
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 10,
+          itemCount: 6,
           itemBuilder: (context, index) {
             return index == 0
                 ? _addStoryContainer(context)
-                : _getStoryContainer(context, index);
+                : _getStoryContainer(context, index - 1);
           },
         ),
       ),
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
             height: 12,
           ),
           Text(
-            index == 0 ? "Amirahmad" : "user$index",
+            "user$index",
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],

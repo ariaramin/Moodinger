@@ -147,7 +147,7 @@ class _ActivityScreenState extends State<ActivityScreen>
               Row(
                 children: [
                   Text(
-                    index == 0 ? "Amirahmad" : "user$index",
+                    "user$index",
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   SizedBox(

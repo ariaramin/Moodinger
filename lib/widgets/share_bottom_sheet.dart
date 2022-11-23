@@ -101,14 +101,14 @@ class _ShareBottomSheetState extends State<ShareBottomSheet> {
                           height: 8,
                         ),
                         Text(
-                          index == 0 ? "Amirahmad" : "user$index",
+                          "user$index",
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ],
                     ),
                   );
                 },
-                childCount: 24,
+                childCount: 6,
               ),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,

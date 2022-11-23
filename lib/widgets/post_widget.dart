@@ -42,8 +42,8 @@ class PostWidget extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 1.12,
                 height: MediaQuery.of(context).size.width / 1.12,
                 child: Image.asset(
-                  'images/posts/post${_index + 1}.png',
-                  fit: BoxFit.fill,
+                  'images/posts/post$_index.png',
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -174,7 +174,7 @@ class PostWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      _index == 0 ? "Amirahmad" : "user$_index",
+                      "user$_index",
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     SizedBox(

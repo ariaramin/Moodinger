@@ -114,7 +114,7 @@ class AddPostScreen extends StatelessWidget {
                         ),
                       );
               },
-              childCount: 9,
+              childCount: 6,
             ),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,

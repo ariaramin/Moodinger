@@ -1,6 +1,6 @@
 # moodinger
 
-A new Flutter project.
+![image](preview/moodinger.png)
 
 ## Getting Started
 

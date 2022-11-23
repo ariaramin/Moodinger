@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:moodinger/constants/constants.dart';
-import 'package:moodinger/screens/activity_screen.dart';
-import 'package:moodinger/screens/add_post_screen.dart';
-import 'package:moodinger/screens/explore_screen.dart';
-import 'package:moodinger/screens/login_screen.dart';
-import 'package:moodinger/screens/main_screen.dart';
-import 'package:moodinger/screens/profile_screen.dart';
 import 'package:moodinger/screens/splash_screen.dart';
 
 void main() {
@@ -53,7 +47,7 @@ class Application extends StatelessWidget {
           color: whiteColor,
         ),
       ),
-      home: MainScreen(),
+      home: SplashScreen(),
     );
   }
 }
